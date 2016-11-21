@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+ <script src="bootstrap/js/bootstrap.min.js">
+ </script>
+  <style type="text/css">
+           /* Style the label so it looks like a button */
+       #toggle-button { background-color: blue; margin: 5px 0; border-radius: 20px; border: 2px solid #D0D0D0; height: 24px; cursor: pointer; width: 50px; position: relative; display: inline-block; user-select: none; -webkit-user-select: none; -ms-user-select: none; -moz-user-select: none; }
+#toggle-button button {
+ cursor: pointer; left: 0; 
+ top: 0; border-radius: 100%; width: 20px; height: 20px; background-color: white; 
+ float: left; margin: 0; border: 2px solid #D0D0D0; transition:  5s; }
+#toggle-button-selected { background-color: blue;border-radius: 20px; 
+border: 2px solid #7DA652; height: 24px; cursor: pointer; width: 50px; position: relative; 
+display: inline-block; user-select: none; -webkit-user-select: none; -ms-user-select: none; -moz-user-select: none;}
+#toggle-button-selected button { 
+left: 26px; top: 0; margin: 0; border: none; width: 20px; border-radius: 100%;height: 20px;
+ box-shadow: 0 0 4px rgba(0,0,0,0.1); 
+ float:right;}
+      </style>
+      <body>
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12" style="background-color: black;height: 50px"></div>
+<div class="col-md-2" style="background-color: blue;height: 200px;border-right-color: white;border-style: solid;border-width:1px;">
+<h4 align="center" style="color: white;font-family: serif;margin-top: 50px">Aloft Group</h4>
+<p align="center" style="color:#87CEFA;font-family: sans-serif;">Tracy Hartman</p>
+Lapsed<p style="position: absolute;margin-top: 0 px;margin-left: 80px">Customers</p>
+<div id="toggle-button" onclick="y()" style="display:block;margin-left: 20px;">
+        <button></button>
+    </div>
+    
+    
+    <div id="toggle-button-selected" align="center" onclick="z()" style="display:none;margin-left: 40px;">
+        <button></button>
+    </div>
+    
+</div>
+<div class="col-md-10" style="background-color: blue;height: 100px;border-bottom-color: white;border-style: solid;border-width:1px;">
+<img id="images" alt="" src="f.JPG"/>
+</div>
+<div class="col-md-2" style="background-color: blue;height: 100px;border-right-color: white;border-style: solid;border-width:1px;">
+<p style="color:#79B9E1" align="center">CREDIT HOLD</p>
+<h1 style="color:white" align="center">$35.000</h1>
+</div>
+<div class="col-md-2" style="background-color: blue;height: 100px;border-right-color: white;border-style: solid;border-width:1px;">
+<p style="color:#79B9E1" align="center">RENEW OPP</p>
+<h1 style="color:white" align="center">$4.000</h1>
+</div>
+<div class="col-md-2" style="background-color: blue;height: 100px;border-right-color: white;border-style: solid;border-width:1px;">
+<p style="color:#79B9E1" align="center">DAY(S) LEFT</p>
+<h1 style="color:white" align="center">15</h1>
+</div>
+<div class="col-md-2" style="background-color: blue;height: 100px;border-right-color: white;border-style: solid;border-width:1px;">
+<p style="color:WHITE" align="center">URGENT<span style="color:#79B9E1;float: right;">see all</span></p>
+<p style="color:WHITE">Amanda wants to move forward, send over contract EOW</p>
+</div>
+<div class="col-md-2" style="background-color: blue;height: 100px;"></div>
+</div>
+<div class="row">
+<div class="col-md-2" style="height: 500px">
+<nav style="width:100 px;">
+  <ul class="nav nav-pills nav-stacked span2" style="border-radius: 0 px">
+    <li><a href="#">Activities</a></li>
+    <li><a href="#">Opportunities</a></li>
+    <li><a href="#">Assets</a></li>
+    <li><a href="#">Contracts</a></li>
+    <li><a href="#usage data">Usage Data</a></li>
+    <li><a href="#">Google Notes</a></li>
+    <li><a href="#">Accounts</a></li>
+    <li><a href="#">Account History</a></li>
+    <li><a href="#">Risks</a></li>
+  </ul>
+</nav>
+</div>
+<div class="col-md-10" style="background:#E0EEEE;height: 500px">
+<div id="usage data" style="background-color: white;margin-top: 20px;height: 300px">
+<span style="margin-left: 20px;margin-top: 10px">USAGE</span>
+<span style="margin-left: 600px;margin-top: 10px">YEAR</span>
+<select onchange="switchImage(this.value)" style="border-radius: 20px;margin-top: 10px">
+  <option value="0">2016</option>
+  <option value="1">2015</option>
+  <option value="1">2014</option>
+  <option value="0">2013</option>
+</select>
+<span style="margin-right: 10px;margin-top: 10px;position: absolute;">CONTENT</span>
+<select onchange="switchImage(this.value)" style="border-radius: 20px;margin-left: 70px;margin-top: 10px;position: absolute;">
+  <option value="0">All</option>
+  <option value="1">More</option>
+  <option value="0">Less</option>
+  <option value="1">Very Less</option>
+</select>
+<div>
+<div class="col-md-1" id="ch"style="background:#E0EEEE;margin-top: 10px;border: thick solid white;" onclick="charts(this)">Charts</div>
+<div class="col-md-1"id="ta"style="background:#E0EEEE;margin-top: 10px;border: thick solid white;"onclick="tables(this)">Tables</div>
+<div class="col-md-10"style="background:#E0EEEE;margin-top: 10px;height: 20px"></div>
+<div class="col-md-12">
+<div class="col-md-8"></div>
+<input type="radio" name="rad" value="0" onclick="funct(this.value)">Activities
+<input type="radio" name="rad" value="1" onclick="funct(this.value)">Lists
+<input type="radio" name="rad" value="0" onclick="funct(this.value)">Logins
+<input type="radio" name="rad" value="1" onclick="funct(this.value)">Seasion Length
+<img id="image" alt="" src="i.gif" align="middle" style="margin-top: 50px">
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<script type="text/javascript">
+var pictureList = [
+    "f.JPG",
+    "i.gif",
+     ];
+function switchImage(val) {
+	document.getElementById('image').src=pictureList[val];
+}
+function funct(val){
+	document.getElementById('image').src=pictureList[val];
+}
+ function y(){
+document.getElementById("toggle-button").style.display = "none";
+ document.getElementById("toggle-button-selected").style.display="block";
+ document.getElementById('images').src="i.gif";
+ }
+ function z(){
+	 document.getElementById("toggle-button").style.display = "block";
+	 document.getElementById('images').src="f.JPG";
+	  document.getElementById("toggle-button-selected").style.display="none";
+	  }
+ function charts(divobj){
+	 divobj.style.background="white";
+	 divobj.style.borderColor="green";
+	 document.getElementById('ta').style.background="#E0EEEE";
+	 document.getElementById('ta').style.borderColor="white";
+	 document.getElementById('image').src="f.JPG";
+	 
+ }
+ function tables(divobj){
+	 divobj.style.background="white";
+	 divobj.style.borderColor="green";
+	 document.getElementById('ch').style.background="#E0EEEE";
+	 document.getElementById('ch').style.borderColor="white";
+	 
+	 document.getElementById('image').src="i.gif";
+ }
+ </script>
+</body>
+</html>
